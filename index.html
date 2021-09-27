@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <meta name="author" content="Ljubomir Matovic">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Intro component with sign up form</title>
 </head>
@@ -20,10 +20,22 @@
         <p><span class="bold">Try it free 7 days</span> then $20/mo. thereafter</p>
       </header>
         <form>
-        <input type="text" placeholder="First Name" required>
-        <input type="text" placeholder="Last Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="password" placeholder="Password" required>
+        <section class="input-and-errors hide">
+          <input type="text" placeholder="First Name" required>
+          <img src="./assets/images/icon-error.svg" alt="icon-error" class="icon-error">
+        </section>
+        <section class="input-and-errors hide">
+          <input type="text" placeholder="Last Name" required>
+          <img src="./assets/images/icon-error.svg" alt="icon-error" class="icon-error">
+        </section>
+        <section class="input-and-errors hide">
+          <input type="email" placeholder="Email Address" required>
+          <img src="./assets/images/icon-error.svg" alt="icon-error" class="icon-error">
+        </section>
+        <section class="input-and-errors hide">
+          <input type="password" placeholder="Password" required>
+          <img src="./assets/images/icon-error.svg" alt="icon-error" class="icon-error">
+        </section>
         <button>Claim your free trial</button>
         <p class="gray terms">By clicking the button, you are agreeing to our <span class="red">Terms and Services</span></p>
         </form>

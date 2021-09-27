@@ -66,6 +66,7 @@ input {
     line-height: 26px;
     letter-spacing: 0.25px;
     color: var(--black);
+    width: 100%;
 }
 input:focus {
     outline-color: var(--purple);
@@ -95,7 +96,7 @@ button:hover {
 .gray {
     color: var(--gray);
 }
-.hide {
+.hide > :not(input) {
     display: none;
 }
 .terms {
@@ -103,6 +104,28 @@ button:hover {
     font-size: 11px;
     line-height: 26px;
     text-align: center;
+}
+.input-and-errors {
+    position: relative;
+}
+.input-and-errors:not(.hide) > input {
+    padding-right: 34px;
+    outline-color: var(--red);
+    border-color: var(--red);
+    border-width: 2px;
+}
+.icon-error {
+    position: absolute;
+    right: 10px;
+    top: 16px;
+}
+.error {
+    text-align: right;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--red);
 }
 /*Desktop*/
 @media screen and (min-width: 1000px) {
