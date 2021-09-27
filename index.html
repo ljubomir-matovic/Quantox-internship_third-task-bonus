@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <meta name="author" content="Ljubomir Matovic">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./assets/css/style.css">
   <title>Intro component with sign up form</title>
 </head>
 <body>
   <main>
     <section class="left-container">
-      <h1>Learn to code by watching others</h1>
+      <h1 class="bold">Learn to code by watching others</h1>
       <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
         but understanding how developers think is invaluable.</p>
     </section>
     <section class="right-container">
       <header>
-        <span>Try it free 7 days</span> then $20/mo. thereafter
+        <p><span class="bold">Try it free 7 days</span> then $20/mo. thereafter</p>
       </header>
         <form>
         <input type="text" placeholder="First Name" required>
@@ -25,9 +25,11 @@
         <input type="email" placeholder="Email Address" required>
         <input type="password" placeholder="Password" required>
         <button>Claim your free trial</button>
+        <p class="gray terms">By clicking the button, you are agreeing to our <span class="red">Terms and Services</span></p>
         </form>
-        <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
     </section>
   </main>
+  <noscript>Please enable JavaScript!</noscript>
+  <script src="./assets/js/validation_and_submit.js"></script>
 </body>
 </html>
