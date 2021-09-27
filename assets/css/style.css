@@ -3,7 +3,7 @@
     --red: #ff7979;
     --green: #38cc8b;
     --purple: #5e54a4;
-    --black: #3d3b48;
+    --black: #3e3c49;
     --gray: #bab7d4;
     --bg-gradient-color: rgba(255, 121, 121, 0.9);
     --bg-gradient: linear-gradient(
@@ -61,11 +61,30 @@ button {
 }
 input {
     padding-left: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.25px;
+    color: var(--black);
+}
+input:focus {
+    outline-color: var(--purple);
 }
 button {
     background: var(--green);
     box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
     border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 26px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+button:hover {
+    background: #77e2b3;
+    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+    cursor: pointer;
 }
 .bold {
     font-weight: 700;
