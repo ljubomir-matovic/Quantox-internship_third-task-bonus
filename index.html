@@ -21,20 +21,26 @@
       </header>
         <form>
         <section class="input-and-errors hide">
-          <input type="text" placeholder="First Name" required>
+          <input type="text" name="First Name" placeholder="First Name" required>
           <img src="./assets/images/icon-error.svg" alt="icon-error" class="icon-error">
+          <p data-rule="valueMissing">First Name cannot be empty</p>
         </section>
         <section class="input-and-errors hide">
-          <input type="text" placeholder="Last Name" required>
+          <input type="text" name="Last Name" placeholder="Last Name" required>
           <img src="./assets/images/icon-error.svg" alt="icon-error" class="icon-error">
+          <p data-rule="valueMissing">Last Name cannot be empty</p>
         </section>
         <section class="input-and-errors hide">
-          <input type="email" placeholder="Email Address" required>
+          <input type="email" name="Email" placeholder="Email Address" required>
           <img src="./assets/images/icon-error.svg" alt="icon-error" class="icon-error">
+          <p data-rule="valueMissing">Email cannot be empty</p>
+          <p data-rule="typeMismatch">Looks like this is not email</p>
         </section>
         <section class="input-and-errors hide">
-          <input type="password" placeholder="Password" required>
+          <input type="password" name="Password" placeholder="Password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,20}$" required>
           <img src="./assets/images/icon-error.svg" alt="icon-error" class="icon-error">
+          <p data-rule="valueMissing">Password cannot be empty</p>
+          <p data-rule="patternMismatch">Password must contain numbers, letters and special caracter. Length of password must be between 8 and 20 characters</p>
         </section>
         <button>Claim your free trial</button>
         <p class="gray terms">By clicking the button, you are agreeing to our <span class="red">Terms and Services</span></p>
