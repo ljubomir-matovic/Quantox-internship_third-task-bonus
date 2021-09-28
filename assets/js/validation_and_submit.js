@@ -1,23 +1,37 @@
 let inputs = document.querySelectorAll("input");
 let form = document.querySelector("form");
 let button = document.querySelector("button");
-let rules = new Set();
-document.querySelectorAll("[data-rule]").forEach((r) => { rules.add(r.getAttribute("data-rule")); });
-const validate = (e = form) => { return e.checkValidity(); }
+const validate = (e = form) => {
+    let validity= e.checkValidity();
+    let parent = e.parentElement;
+    if(validity)
+    {
+        if (e === form)
+            e.querySelectAll(".input-and-errors").forEach((i) => {
+                i.classList.add("hide");
+            });
+        else parent.classList.add("hide");
+        parent.querySelectorAll("[data-rule]").forEach((r)=>{
+            r.style.display="none";
+        });
+	}
+    return validity; 
+};
 const validityFail = (e) => {
     e.preventDefault();
     let el = e.srcElement;
     let parent = el.parentElement;
     parent.classList.remove("hide");
     let validity = el.validity;
-    for (let r of rules) {
-        let err = parent.querySelector(`[data-rule="${r}"]`);
-        if (err === null) continue;
+    let errs = parent.querySelectorAll(`[data-rule]`);
+    let r;
+    errs.forEach((err)=>{
+        r=err.getAttribute("data-rule");
         if (!validity[r])
             err.style.display = "none";
         else
             err.style.display = "block";
-    }
+    });
 };
 const submitHandler = (e) => {
     e.preventDefault();
